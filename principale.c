@@ -1,118 +1,118 @@
 #include <stdio.h>
+/* initialize the variables */
+char position_a = 'A';
+char position_b = 'B';
+char position_c = 'C';
+char position_d = 'D';
+char position_e = 'E';
 
-char posizione_a = 'A';
-char posizione_b = 'B';
-char posizione_c = 'C';
-char posizione_d = 'D';
-char posizione_e = 'E';
+unsigned short int button = 1;
+unsigned short int switch = 2;
+unsigned short int contactor = 3;
+unsigned short int thermal = 4;
+unsigned short int relay = 5;
 
-unsigned short int pulsante = 1;
-unsigned short int interruttore = 2;
-unsigned short int contattore = 3;
-unsigned short int termico = 4;
-unsigned short int rele = 5;
-
-unsigned short int risposta1;
-char risposta2;
-unsigned short int ripetizione1 = 1;
-unsigned short int ripetizione2 = 1;
+unsigned short int reply1;
+char reply2;
+unsigned short int repetition1 = 1;
+unsigned short int repetition2 = 1;
 
 
 int main () {
 
-	printf("MAGAZZINO AZIENDA\n");
+	printf("COMPANY WAREHOUSE\n");
 
-	while (ripetizione1 == 1) {
-		printf("SCEGLIERE OGGETTO DA CERCARE:\n\n");	
-		printf("(1) pulsante\n");
-		printf("(2) interruttore\n");
-		printf("(3) contattore\n");
-		printf("(4) termico\n");
-		printf("(5) rele\n\n");
+	while (repetition1 == 1) {
+		printf("CHOOSE OBJECT TO LOOK FOR:\n\n");	
+		printf("(1) button\n");
+		printf("(2) switch\n");
+		printf("(3) contactor\n");
+		printf("(4) thermal\n");
+		printf("(5) relay\n\n");
 
-		printf("DIGITARE NUMERO E PREMERE INVIO:");
-		scanf("%d",&risposta1);
+		printf("TYPE NUMBER AND PRESS ENTER:");
+		scanf("%d",&reply1);
 		printf("\n\n");
 	
 	
-		switch (risposta1) {
+		switch (reply1) {
 
 			case 1:
-				printf("hai selezionato pulsante\n");
-				printf("l'oggetto si trova nel settore: %c\n", posizione_a);
+				printf("you have selected button\n");
+				printf("the object is located in the sector: %c\n", position_a);
 				printf("\n");
 			break;
 
 			case 2:
-				printf("hai selezionato interruttore\n");
-				printf("l'oggetto si trova nel settore: %c\n", posizione_b);
+				printf("you have selected switch\n");
+				printf("the object is located in the sector: %c\n", position_b);
 				printf("\n");
 			break;
 
 			case 3:
-				printf("hai selezionato interruttore\n");
-				printf("l'oggetto si trova nel settore: %c\n", posizione_c);
+				printf("you have selected contactor\n");
+				printf("the object is located in the sector: %c\n", position_c);
 				printf("\n");
 			break;
 
 			case 4:
-				printf("hai selezionato interruttore\n");
-				printf("l'oggetto si trova nel settore: %c\n", posizione_d);
+				printf("you have selected thermal\n");
+				printf("the object is located in the sector: %c\n", position_d);
 				printf("\n");
 			break;
 
 			case 5:
-				printf("hai selezionato interruttore\n");
-				printf("l'oggetto si trova nel settore: %c\n", posizione_e);
+				printf("you have selected relay\n");
+				printf("the object is located in the sector: %c\n", position_e);
 				printf("\n");
 			break;
 	
 			default:
-				printf("non hai selezionato nulla!\n\n");
+				printf("you have not selected anything!\n\n");
 				printf("\n");
 			break;
 		}
  	
 		
-		printf("CONTINUARE CON LA RICERCA? [S/N]:");
+		printf("CONTINUE WITH THE SEARCH? [S/N]:");
 
-		while (ripetizione2 == 1) {
+		while (repetition2 == 1) {
 
-			scanf(" %c",&risposta2);
-			switch (risposta2) {
+			scanf(" %c",&reply2);
+			switch (reply2) {
 
 				case 'N':
-					printf("ARRIVEDERCI\n\n");
-					ripetizione1 = 0;
-					ripetizione2 = 0;
+					printf("GOODBYE!\n\n");
+					repetition1 = 0;
+					repetition2 = 0;
 				break;
 
 				case 'n':
-					printf("ARRIVEDERCI\n\n");
-					ripetizione1 = 0;
-					ripetizione2 = 0;
+					printf("GOODBYE!\n\n");
+					repetition1 = 0;
+					repetition2 = 0;
 				break;
 
 				case 'S':
-					ripetizione1 = 1;
-					ripetizione2 = 0;
+					repetition1 = 1;
+					repetition2 = 0;
 					printf("\n");
 				break;
 
 				case 's':
-					ripetizione1 = 1;
-					ripetizione2 = 0;
+					repetition1 = 1;
+					repetition2 = 0;
 					printf("\n");
 				break;
 
 				default:
-					printf("CARATTERE NON VALIDO, RIPROVARE:");
-					ripetizione2 = 1;
+					printf("INVALID CHARACTER, RETRY:");
+					repetition2 = 1;
 				break;
 			}
 		}
 
-		ripetizione2 = 1;
+		repetition2 = 1;
 
 	}	
 	return 0;
