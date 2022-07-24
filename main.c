@@ -7,7 +7,7 @@ char position_d = 'D';
 char position_e = 'E';
 
 unsigned short int button = 1;
-unsigned short int switch = 2;
+unsigned short int breaker = 2;
 unsigned short int contactor = 3;
 unsigned short int thermal = 4;
 unsigned short int relay = 5;
@@ -25,7 +25,7 @@ int main () {
 	while (repetition1 == 1) {
 		printf("CHOOSE OBJECT TO LOOK FOR:\n\n");	
 		printf("(1) button\n");
-		printf("(2) switch\n");
+		printf("(2) breaker\n");
 		printf("(3) contactor\n");
 		printf("(4) thermal\n");
 		printf("(5) relay\n\n");
@@ -44,7 +44,7 @@ int main () {
 			break;
 
 			case 2:
-				printf("you have selected switch\n");
+				printf("you have selected breaker\n");
 				printf("the object is located in the sector: %c\n", position_b);
 				printf("\n");
 			break;
